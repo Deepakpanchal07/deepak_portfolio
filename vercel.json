@@ -1,32 +1,12 @@
 {
-  "version": 2,
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "builds": [
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": "public",
+  "rewrites": [
     {
-      "src": "build/web/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/Deepak_Panchal_Resume.pdf",
-      "headers": {
-        "Content-Type": "application/pdf",
-        "Content-Disposition": "inline; filename=\"Deepak_Panchal_Resume.pdf\""
-      },
-      "dest": "/Deepak_Panchal_Resume.pdf"
-    },
-    {
-      "src": "/(.*\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|otf|wasm|json|pdf))$",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable"
-      },
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
