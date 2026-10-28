@@ -157,29 +157,13 @@ class _ProjectCardState extends State<ProjectCard> {
                       icon: FontAwesomeIcons.github,
                       height: 42,
                       fontSize: 13,
-                      variant: ButtonVariant.secondary,
+                      variant: ButtonVariant.primary,
                       onPressed: () {
                         CustomDialogs.launchOrShowPlaceholder(
                           context,
                           url: widget.project.githubUrl,
                           itemName: "${widget.project.title} GitHub",
                           configField: "projects[...].githubUrl",
-                        );
-                      },
-                    ),
-                    AnimatedButton(
-                      text: "Live Demo",
-                      icon: Icons.open_in_new_rounded,
-                      isTrailingIcon: true,
-                      height: 42,
-                      fontSize: 13,
-                      variant: ButtonVariant.outline,
-                      onPressed: () {
-                        CustomDialogs.launchOrShowPlaceholder(
-                          context,
-                          url: widget.project.liveDemoUrl,
-                          itemName: "${widget.project.title} Demo",
-                          configField: "projects[...].liveDemoUrl",
                         );
                       },
                     ),
